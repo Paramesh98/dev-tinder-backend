@@ -1,10 +1,9 @@
 const express = require("express");
 const connectToDB = require("./config/database");
-const bodyParser = require("body-parser");
 const User = require("./models/user");
 
 const app = express();
-app.use(bodyParser.json());
+app.use(express.json());
 const PORT = "8081";
 
 app.post("/signup", async (req, res) => {
